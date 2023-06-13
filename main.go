@@ -56,6 +56,6 @@ func main() {
 	}
 
 	fs := http.FileServer(http.Dir("examples/html"))
-	log.Println("running server at http://localhost:8089")
-	log.Fatal(http.ListenAndServe("localhost:8089", logRequest(fs)))
+	log.Println("running server on http://localhost:8089")
+	log.Fatal(http.ListenAndServe(":8089", logRequest(fs)))
 }
